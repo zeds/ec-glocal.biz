@@ -1,0 +1,49 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+
+msgctxt "LanguageName"
+msgid "Localized language name"
+msgstr "English"
+
+msgctxt "Addons::name::mkm_mail_verification"
+msgid "mkm_mail_verification"
+msgstr "新規登録時メール確認アドオン"
+
+msgctxt "Addons::description::mkm_mail_verification"
+msgid "mkm_mail_verification."
+msgstr "新規会員登録時に登録したメールアドレスに確認コードを送信して、メールアドレスの実在確認を行うアドオン。"
+
+msgctxt "Languages::check_your_email"
+msgid "<p>登録したメールアドレスにメールを送信しました。ご確認ください。</p>"
+msgstr "<p>登録したメールアドレスにメールを送信しました。ご確認ください。</p>"
+
+msgctxt "Languages::verify_url"
+msgid "メール認証用URL"
+msgstr "メール認証用URL"
+
+msgctxt "Languages::successful_activate_your_account"
+msgid "メール認証が完了しました。以降は登録したメールアドレスとパスワードでログインが可能です。"
+msgstr "メール認証が完了しました。以降は登録したメールアドレスとパスワードでログインが可能です。"
+
+msgctxt "Languages::text_verification_key_not_valid"
+msgid "認証用キーが間違っています。ショップ管理者にお問い合わせください。"
+msgstr "認証用キーが間違っています。ショップ管理者にお問い合わせください。"
+
+msgctxt "Languages::resend_verification_key"
+msgid "認証用キーを再送する"
+msgstr "認証用キーを再送する"
+
+msgctxt "Languages::resend_key"
+msgid "再送する"
+msgstr "再送する"
+
+msgctxt "Languages::user_no_exist"
+msgid "該当するユーザーが存在しません。管理者にお問い合わせください。"
+msgstr "該当するユーザーが存在しません。管理者にお問い合わせください。"
+
+msgctxt "Languages::sent_verification_key"
+msgid "認証用キーを再送しました。"
+msgstr "認証用キーを再送しました。"

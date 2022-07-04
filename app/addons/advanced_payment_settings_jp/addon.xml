@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<addon scheme="2.0">
+	<id>advanced_payment_settings_jp</id>
+	<name>支払方法拡張設定</name>
+	<description>支払方法が有効になる購入金額上限・下限や購入金額に応じた手数料を設定します</description>
+	<version>1.0</version>
+	<priority>0</priority>
+	<position>500</position>
+	<status>active</status>
+	<dependencies/>
+    <settings edition_type="ROOT,ULT:VENDOR">
+		<sections>
+			<section id="general">
+				<name>General</name>
+				<items>
+					<item id="elm_design">
+						<name>設定</name>
+						<type>header</type>
+						<handler/>
+						<translations>
+							<item lang="en">Settings</item>
+						</translations>
+					</item>
+					<item id="jp_enable_min_amount">
+						<name>各支払方法の購入金額下限を設定</name>
+						<type>checkbox</type>
+						<default_value>Y</default_value>
+						<translations>
+							<item lang="en">Enable min amount of each payment method</item>
+						</translations>
+					</item>
+					<item id="jp_enable_max_amount">
+						<name>各支払方法の購入金額上限を設定</name>
+						<type>checkbox</type>
+						<default_value>Y</default_value>
+						<translations>
+							<item lang="en">Enable max amount of each payment method</item>
+						</translations>
+					</item>
+					<item id="jp_enable_charge_by_subtotal">
+						<name>購入金額に応じた手数料の設定</name>
+						<type>checkbox</type>
+						<default_value>Y</default_value>
+						<translations>
+							<item lang="en">Set surcharge by Subtotal</item>
+						</translations>
+					</item>
+					<item id="jp_include_shipping_cost">
+						<name>購入金額に送料を含める</name>
+						<type>checkbox</type>
+						<default_value>N</default_value>
+						<translations>
+							<item lang="en">Subtotal includes shipping cost</item>
+						</translations>
+					</item>
+				</items>
+				<translations>
+					<item lang="ja">基本設定</item>
+				</translations>
+			</section>
+		</sections>
+	</settings>
+	<queries>
+		<item>CREATE TABLE IF NOT EXISTS `?:jp_adv_payment_settings` (`payment_id` mediumint(8) unsigned NOT NULL, `min_amount` int(11) unsigned NOT NULL default '0', `max_amount` int(11) unsigned NOT NULL default '0', `charges_by_subtotal` varchar(255) NULL, PRIMARY KEY  (`payment_id`)) ENGINE=MyISAM DEFAULT CHARSET=utf8</item>
+		<item for="uninstall">DROP TABLE IF EXISTS `?:jp_adv_payment_settings`</item>
+		<item for="uninstall">DELETE FROM `?:language_values` WHERE `name` LIKE 'jp_advpay_%'</item>
+	</queries>
+	<language_variables>
+		<item id="jp_advpay_min_amount" lang="en">購入金額の下限</item>
+		<item id="jp_advpay_max_amount" lang="en">購入金額の上限</item>
+		<item id="jp_advpay_charges" lang="en">購入金額に応じた手数料</item>
+		<item id="jp_advpay_charges_instruction" lang="en"><![CDATA[※ <strong>[購入金額小計の閾値]:[手数料],[購入金額小計の閾値]:[手数料], ...</strong> という形式で入力します。<br /><br />例)<br />5,000円まで - 手数料 315円<br />10,000円まで - 手数料 525円<br />10,000円を超過 - 手数料 1,050円<br />の場合には、<br /><strong>5000:315,10000:525,9999999:1050</strong><br />のように入力します。]]></item>
+
+		<item id="jp_advpay_min_amount" lang="ja">購入金額の下限</item>
+		<item id="jp_advpay_max_amount" lang="ja">購入金額の上限</item>
+		<item id="jp_advpay_charges" lang="ja">購入金額に応じた手数料</item>
+		<item id="jp_advpay_charges_instruction" lang="ja"><![CDATA[※ <strong>[購入金額小計の閾値]:[手数料],[購入金額小計の閾値]:[手数料], ...</strong> という形式で入力します。<br /><br />例)<br />5,000円まで - 手数料 315円<br />10,000円まで - 手数料 525円<br />10,000円を超過 - 手数料 1,050円<br />の場合には、<br /><strong>5000:315,10000:525,9999999:1050</strong><br />のように入力します。]]></item>
+	</language_variables>
+</addon>

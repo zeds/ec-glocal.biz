@@ -1,0 +1,1 @@
+a:2:{s:4:"data";a:1:{i:0;a:7:{s:5:"price";d:0;s:4:"keys";a:3:{s:9:"group_key";i:0;s:11:"shipping_id";i:8;s:10:"company_id";i:1;}s:5:"error";b:0;s:13:"delivery_time";s:60:"お届け時間帯、希望日は必ずご指定ください";s:21:"service_delivery_time";b:0;s:14:"destination_id";b:0;s:11:"pickup_info";a:0:{}}}s:6:"expiry";i:0;}
